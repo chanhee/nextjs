@@ -25,8 +25,8 @@ export default function Home() {
         </Link>
       </main>
 
-      <h1>Home</h1>
-      hello world
+      <h1>About</h1>
+      hello world about
     </div>
   )
 }
