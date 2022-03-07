@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+export default function Home({name}) {
   return (
     <div className={styles.container}>
       <Head>
@@ -26,7 +26,15 @@ export default function Home() {
       </main>
 
       <h1>Me</h1>
-      hello world me
+      hello world {name}
     </div>
   )
+}
+
+export async function getServerSideProps() {
+  return {
+    props: {
+      name: 'chanhee',
+    },
+  }
 }
